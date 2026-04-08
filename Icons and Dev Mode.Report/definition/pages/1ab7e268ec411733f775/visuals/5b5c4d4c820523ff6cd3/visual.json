@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "5b5c4d4c820523ff6cd3",
+  "position": {
+    "x": 453.31052181351578,
+    "y": 384.32848588537212,
+    "z": 2,
+    "height": 279.213002566296,
+    "width": 440.1710863986313,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "patient_race"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.patient_race",
+              "nativeQueryRef": "patient_race",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Hospital_ER_Data_20240826"
+                        }
+                      },
+                      "Property": "patient_id"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(Hospital_ER_Data_20240826.patient_id)",
+              "nativeQueryRef": "Count of patient_id"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Hospital_ER_Data_20240826"
+                      }
+                    },
+                    "Property": "patient_id"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b0644ab86ad4f5014c2f",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Hospital_ER_Data_20240826"
+                  }
+                },
+                "Property": "patient_id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "482a7f0ed8c0f56b0cf6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "patient_race"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

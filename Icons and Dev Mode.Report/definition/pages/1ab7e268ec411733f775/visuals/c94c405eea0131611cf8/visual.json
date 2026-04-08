@@ -1,0 +1,168 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "c94c405eea0131611cf8",
+  "position": {
+    "x": 0,
+    "y": 94.165953806672363,
+    "z": 0,
+    "height": 280.30795551753636,
+    "width": 751.13772455089816,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "Date & Time"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.Date & Time",
+              "nativeQueryRef": "Date & Time"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "department_referral"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.department_referral",
+              "nativeQueryRef": "department_referral"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "patient_first_initial"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.patient_first_initial",
+              "nativeQueryRef": "patient_first_initial"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "patient_last_name"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.patient_last_name",
+              "nativeQueryRef": "patient_last_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "patient_race"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.patient_race",
+              "nativeQueryRef": "patient_race"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "26ffb926fe77afa949b3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "Date & Time"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2545d8cfede9569d0db7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "department_referral"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "333938f337bfb94e3b73",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "patient_first_initial"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8d8aca75a3d9c83b76f2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "patient_last_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cb7a8808ef9da7756001",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "patient_race"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
