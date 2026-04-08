@@ -1,0 +1,164 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "62d8eca511df66941577",
+  "position": {
+    "x": 455.45381526104416,
+    "y": 0,
+    "z": 1,
+    "height": 719.67871485943772,
+    "width": 338.24899598393574,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "patient_id"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.patient_id",
+              "nativeQueryRef": "patient_id"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "__Measures"
+                    }
+                  },
+                  "Property": "Avg_Satisfaction"
+                }
+              },
+              "queryRef": "__Measures.Avg_Satisfaction",
+              "nativeQueryRef": "Avg_Satisfaction"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Hospital_ER_Data_20240826"
+                  }
+                },
+                "Property": "patient_id"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'IconOnly'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Middle'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "__Measures"
+                      }
+                    },
+                    "Property": "Icon_Satisfaction"
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "__Measures.Avg_Satisfaction"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "132.70281124497993D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "__Measures.Avg_Satisfaction"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2dfd66bc1373d481e742",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "patient_id"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2a267e4fca22e4c09806",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "__Measures"
+              }
+            },
+            "Property": "Avg_Satisfaction"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
