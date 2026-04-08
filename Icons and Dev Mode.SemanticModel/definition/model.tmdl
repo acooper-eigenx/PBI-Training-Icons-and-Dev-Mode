@@ -1,0 +1,18 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Hospital_ER_Data_20240826"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Hospital_ER_Data_20240826
+
+ref cultureInfo en-US
+
