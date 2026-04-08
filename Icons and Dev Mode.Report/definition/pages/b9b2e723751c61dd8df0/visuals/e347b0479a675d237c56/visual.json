@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "e347b0479a675d237c56",
+  "position": {
+    "x": 0,
+    "y": 90.455927051671736,
+    "z": 0,
+    "height": 280.1215805471125,
+    "width": 280.1215805471125,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "department_referral"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.department_referral",
+              "nativeQueryRef": "department_referral"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "__Measures"
+                    }
+                  },
+                  "Property": "Avg_Satisfaction"
+                }
+              },
+              "queryRef": "__Measures.Avg_Satisfaction",
+              "nativeQueryRef": "Avg_Satisfaction"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6075325380b0694e07b1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "department_referral"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7234d90050ad4d54cdc2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "__Measures"
+              }
+            },
+            "Property": "Avg_Satisfaction"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
