@@ -10,6 +10,22 @@ table __Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Icon_Satisfaction = ```
+			
+			SWITCH(
+			    TRUE(),
+			    [Avg_Satisfaction] >= 7.5, "Icon_Great",
+			
+			    [Avg_Satisfaction] >=5, "Icon_Good",
+			
+			    [Avg_Satisfaction] >= 2.5, "Icon_Ok",
+			    
+			    "Icon_Bad"
+			)
+			```
+		lineageTag: 915b606c-03da-4739-95ab-3db97e105962
+		dataCategory: ImageUrl
+
 	column _
 		dataType: string
 		lineageTag: 216900d4-8cbf-4547-a073-ee3661338b4a
