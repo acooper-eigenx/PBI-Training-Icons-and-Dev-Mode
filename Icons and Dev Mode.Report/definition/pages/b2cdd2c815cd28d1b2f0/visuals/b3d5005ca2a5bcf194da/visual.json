@@ -1,0 +1,192 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "b3d5005ca2a5bcf194da",
+  "position": {
+    "x": 818.08695652173913,
+    "y": 0,
+    "z": 2,
+    "height": 720.1391304347826,
+    "width": 373.98260869565217,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "patient_id"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.patient_id",
+              "nativeQueryRef": "patient_id"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "__Measures"
+                    }
+                  },
+                  "Property": "Avg_Satisfaction"
+                }
+              },
+              "queryRef": "__Measures.Avg_Satisfaction",
+              "nativeQueryRef": "Avg_Satisfaction"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "__Measures"
+                    }
+                  },
+                  "Property": "Image_Satisfaction"
+                }
+              },
+              "queryRef": "__Measures.Image_Satisfaction",
+              "nativeQueryRef": "Image_Satisfaction"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Hospital_ER_Data_20240826"
+                  }
+                },
+                "Property": "patient_id"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'IconOnly'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Middle'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "__Measures"
+                      }
+                    },
+                    "Property": "Icon_Satisfaction"
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "__Measures.Avg_Satisfaction"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "132.70281124497993D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "__Measures.Avg_Satisfaction"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fc964a7407c1ac3a5d34",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "patient_id"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "29deddf5836fe68f9a45",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "__Measures"
+              }
+            },
+            "Property": "Avg_Satisfaction"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "be973ca2994eecc88870",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "__Measures"
+              }
+            },
+            "Property": "Image_Satisfaction"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
