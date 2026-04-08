@@ -1,0 +1,26 @@
+table __Measures
+	lineageTag: 140f02de-c4df-47c0-9de6-3474f705fa5f
+
+	measure Count_Patients = count(Hospital_ER_Data_20240826[patient_id])
+		formatString: 0
+		lineageTag: 4d31c56b-8b22-4849-af69-e70eef0b9843
+
+	column _
+		dataType: string
+		lineageTag: 216900d4-8cbf-4547-a073-ee3661338b4a
+		summarizeBy: none
+		sourceColumn: _
+
+		annotation SummarizationSetBy = Automatic
+
+	partition __Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [_ = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"_", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

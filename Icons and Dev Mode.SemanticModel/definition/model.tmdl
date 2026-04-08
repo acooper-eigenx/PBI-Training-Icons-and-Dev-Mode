@@ -8,11 +8,12 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Hospital_ER_Data_20240826"]
+annotation PBI_QueryOrder = ["Hospital_ER_Data_20240826","__Measures"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table Hospital_ER_Data_20240826
+ref table __Measures
 
 ref cultureInfo en-US
 
