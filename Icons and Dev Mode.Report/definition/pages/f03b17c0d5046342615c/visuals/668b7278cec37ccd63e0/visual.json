@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "5fcb887eadd73ebc968f",
+  "name": "668b7278cec37ccd63e0",
   "position": {
     "x": 0,
     "y": 384.32848588537212,
-    "z": 1,
+    "z": 1000,
     "height": 279.213002566296,
-    "width": 440.1710863986313,
-    "tabOrder": 1
+    "width": 305.491873396065,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -42,11 +42,11 @@
                       "Entity": "__Measures"
                     }
                   },
-                  "Property": "Count_Patients"
+                  "Property": "Avg_Satisfaction"
                 }
               },
-              "queryRef": "__Measures.Count_Patients",
-              "nativeQueryRef": "Count_Patients"
+              "queryRef": "__Measures.Avg_Satisfaction",
+              "nativeQueryRef": "Avg_Satisfaction"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "__Measures"
                   }
                 },
-                "Property": "Count_Patients"
+                "Property": "Avg_Satisfaction"
               }
             },
             "direction": "Descending"
@@ -70,12 +70,27 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "dd41843534add95c6ccf",
+        "name": "9791d31728b4e946672e",
         "field": {
           "Column": {
             "Expression": {
@@ -89,7 +104,7 @@
         "type": "Categorical"
       },
       {
-        "name": "5b55c68b96b3ebeffbed",
+        "name": "6af6989b655b4c3cd946",
         "field": {
           "Measure": {
             "Expression": {
@@ -97,7 +112,7 @@
                 "Entity": "__Measures"
               }
             },
-            "Property": "Count_Patients"
+            "Property": "Avg_Satisfaction"
           }
         },
         "type": "Advanced"

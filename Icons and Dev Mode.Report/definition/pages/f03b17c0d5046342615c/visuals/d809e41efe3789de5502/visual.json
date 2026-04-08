@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "5fcb887eadd73ebc968f",
+  "name": "d809e41efe3789de5502",
   "position": {
-    "x": 0,
+    "x": 321.91616766467064,
     "y": 384.32848588537212,
-    "z": 1,
+    "z": 2000,
     "height": 279.213002566296,
-    "width": 440.1710863986313,
-    "tabOrder": 1
+    "width": 401.84773310521814,
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "Hospital_ER_Data_20240826"
                     }
                   },
-                  "Property": "department_referral"
+                  "Property": "patient_race"
                 }
               },
-              "queryRef": "Hospital_ER_Data_20240826.department_referral",
-              "nativeQueryRef": "department_referral",
+              "queryRef": "Hospital_ER_Data_20240826.patient_race",
+              "nativeQueryRef": "patient_race",
               "active": true
             }
           ]
@@ -42,11 +42,11 @@
                       "Entity": "__Measures"
                     }
                   },
-                  "Property": "Count_Patients"
+                  "Property": "Avg_Satisfaction"
                 }
               },
-              "queryRef": "__Measures.Count_Patients",
-              "nativeQueryRef": "Count_Patients"
+              "queryRef": "__Measures.Avg_Satisfaction",
+              "nativeQueryRef": "Avg_Satisfaction"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "__Measures"
                   }
                 },
-                "Property": "Count_Patients"
+                "Property": "Avg_Satisfaction"
               }
             },
             "direction": "Descending"
@@ -70,12 +70,27 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "dd41843534add95c6ccf",
+        "name": "00e6cf6d51445b6fb173",
         "field": {
           "Column": {
             "Expression": {
@@ -83,13 +98,13 @@
                 "Entity": "Hospital_ER_Data_20240826"
               }
             },
-            "Property": "department_referral"
+            "Property": "patient_race"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "5b55c68b96b3ebeffbed",
+        "name": "3a03e03ccb27c05ae903",
         "field": {
           "Measure": {
             "Expression": {
@@ -97,7 +112,7 @@
                 "Entity": "__Measures"
               }
             },
-            "Property": "Count_Patients"
+            "Property": "Avg_Satisfaction"
           }
         },
         "type": "Advanced"

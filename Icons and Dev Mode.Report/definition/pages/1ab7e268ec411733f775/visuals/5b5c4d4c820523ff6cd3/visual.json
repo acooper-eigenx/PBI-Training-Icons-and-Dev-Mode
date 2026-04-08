@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Hospital_ER_Data_20240826"
-                        }
-                      },
-                      "Property": "patient_id"
+                    "SourceRef": {
+                      "Entity": "__Measures"
                     }
                   },
-                  "Function": 5
+                  "Property": "Count_Patients"
                 }
               },
-              "queryRef": "CountNonNull(Hospital_ER_Data_20240826.patient_id)",
-              "nativeQueryRef": "Count of patient_id"
+              "queryRef": "__Measures.Count_Patients",
+              "nativeQueryRef": "Count_Patients"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Hospital_ER_Data_20240826"
-                      }
-                    },
-                    "Property": "patient_id"
+                  "SourceRef": {
+                    "Entity": "__Measures"
                   }
                 },
-                "Function": 5
+                "Property": "Count_Patients"
               }
             },
             "direction": "Descending"
@@ -85,25 +75,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b0644ab86ad4f5014c2f",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Hospital_ER_Data_20240826"
-                  }
-                },
-                "Property": "patient_id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "482a7f0ed8c0f56b0cf6",
         "field": {
           "Column": {
@@ -116,6 +87,20 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "5a5e0a94925e0c07809a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "__Measures"
+              }
+            },
+            "Property": "Count_Patients"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
