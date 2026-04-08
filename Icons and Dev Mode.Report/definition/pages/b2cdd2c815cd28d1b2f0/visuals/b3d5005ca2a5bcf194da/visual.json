@@ -81,37 +81,7 @@
     "objects": {
       "values": [
         {
-          "properties": {
-            "icon": {
-              "kind": "Icon",
-              "layout": {
-                "expr": {
-                  "Literal": {
-                    "Value": "'IconOnly'"
-                  }
-                }
-              },
-              "verticalAlignment": {
-                "expr": {
-                  "Literal": {
-                    "Value": "'Middle'"
-                  }
-                }
-              },
-              "value": {
-                "expr": {
-                  "Measure": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "__Measures"
-                      }
-                    },
-                    "Property": "Icon_Satisfaction"
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {
