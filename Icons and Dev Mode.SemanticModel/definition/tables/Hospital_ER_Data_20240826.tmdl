@@ -1,0 +1,129 @@
+table Hospital_ER_Data_20240826
+	lineageTag: 8527e6c3-a8c8-4285-9152-bad67e92c4ff
+
+	column 'Date & Time'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c75021fb-9266-4028-a118-295913e05d49
+		summarizeBy: none
+		sourceColumn: Date & Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hour_of_day
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ef6acb6-9526-4bab-87aa-2b0cec139540
+		summarizeBy: sum
+		sourceColumn: Hour_of_day
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_id
+		dataType: string
+		lineageTag: 8c8bb14b-1505-4a91-a554-2c9eed6965c2
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_gender
+		dataType: string
+		lineageTag: 648972f9-8d4d-4588-921d-0f7f1fa5dddf
+		summarizeBy: none
+		sourceColumn: patient_gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_age
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e793ac5-2158-4c1e-bf8e-d3c6f0d08205
+		summarizeBy: sum
+		sourceColumn: patient_age
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_first_initial
+		dataType: string
+		lineageTag: c76b5f3d-7626-464c-b13c-dd56468e71f7
+		summarizeBy: none
+		sourceColumn: patient_first_initial
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_last_name
+		dataType: string
+		lineageTag: a0cf0805-0f55-4fbb-9fa5-b5b1d9bdbca2
+		summarizeBy: none
+		sourceColumn: patient_last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_race
+		dataType: string
+		lineageTag: 5f25bcf9-6e1e-4dc0-907d-0ad222ff1b66
+		summarizeBy: none
+		sourceColumn: patient_race
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_referral
+		dataType: string
+		lineageTag: 8413e5f0-f547-47b8-9100-36d1afbdbb2d
+		summarizeBy: none
+		sourceColumn: department_referral
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: 5358179e-bd23-49e4-953c-214f6442daf5
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_admin_flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1a65603a-1332-45fc-a48e-404c1893ee67
+		summarizeBy: none
+		sourceColumn: patient_admin_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_waittime
+		dataType: int64
+		formatString: 0
+		lineageTag: 15b6bed7-edb2-4cad-b3dd-95a06dc1d5df
+		summarizeBy: sum
+		sourceColumn: patient_waittime
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_sat_score
+		dataType: double
+		lineageTag: dcb19846-308e-46b8-a244-c7b3047f496d
+		summarizeBy: sum
+		sourceColumn: patient_sat_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Hospital_ER_Data_20240826 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\AndrewCooper\OneDrive - Eigen X LLC\PBI\PBI-Training-Icons-and-Dev-Mode\Hospital_ER_Data_20240826.csv"),[Delimiter=",", Columns=13, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date & Time", type datetime}, {"Hour_of_day", Int64.Type}, {"patient_id", type text}, {"patient_gender", type text}, {"patient_age", Int64.Type}, {"patient_first_initial", type text}, {"patient_last_name", type text}, {"patient_race", type text}, {"department_referral", type text}, {"month", Int64.Type}, {"patient_admin_flag", type logical}, {"patient_waittime", Int64.Type}, {"patient_sat_score", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
