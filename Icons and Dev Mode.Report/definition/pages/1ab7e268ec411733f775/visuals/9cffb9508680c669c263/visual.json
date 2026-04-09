@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "9cffb9508680c669c263",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 2,
+    "height": 359.16666666666669,
+    "width": 330,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospital_ER_Data_20240826"
+                    }
+                  },
+                  "Property": "patient_id"
+                }
+              },
+              "queryRef": "Hospital_ER_Data_20240826.patient_id",
+              "nativeQueryRef": "patient_id"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "__Measures"
+                    }
+                  },
+                  "Property": "Avg_Sat_Score"
+                }
+              },
+              "queryRef": "__Measures.Avg_Sat_Score",
+              "nativeQueryRef": "Avg_Sat_Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "__Measures"
+                    }
+                  },
+                  "Property": "Image_Sat"
+                }
+              },
+              "queryRef": "__Measures.Image_Sat",
+              "nativeQueryRef": "Image_Sat"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
