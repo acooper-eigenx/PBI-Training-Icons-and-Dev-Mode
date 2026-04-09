@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Icons and Dev Mode"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f4eae94f-0213-4060-b3bd-bc412b4d01ac"
+  }
+}
