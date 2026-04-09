@@ -6,7 +6,7 @@
     "y": 0,
     "z": 3,
     "height": 306.66666666666669,
-    "width": 330,
+    "width": 220,
     "tabOrder": 3
   },
   "visual": {
@@ -46,6 +46,242 @@
           ]
         }
       }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "__Measures.Avg_Sat_Score"
+          }
+        },
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'After'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Top'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "__Measures"
+                                  }
+                                },
+                                "Property": "Avg_Sat_Score"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "2.5D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'Icon_Bad'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 2,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "__Measures"
+                                      }
+                                    },
+                                    "Property": "Avg_Sat_Score"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "2.5D"
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 3,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "__Measures"
+                                      }
+                                    },
+                                    "Property": "Avg_Sat_Score"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "5D"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'Icon_Ok'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 2,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "__Measures"
+                                      }
+                                    },
+                                    "Property": "Avg_Sat_Score"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "5D"
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 3,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "__Measures"
+                                      }
+                                    },
+                                    "Property": "Avg_Sat_Score"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "7.5D"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'Icon_Good'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 2,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "__Measures"
+                                      }
+                                    },
+                                    "Property": "Avg_Sat_Score"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "7.5D"
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 4,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "__Measures"
+                                      }
+                                    },
+                                    "Property": "Avg_Sat_Score"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "10D"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'Icon_Great'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "__Measures.Avg_Sat_Score"
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

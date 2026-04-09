@@ -29,6 +29,24 @@ table __Measures
 		lineageTag: b551ba48-08d6-4e76-a64c-fd0f5781d19c
 		dataCategory: ImageUrl
 
+	measure Icon_Satisfaction =
+			
+			SWITCH(
+			    TRUE(),
+			    [Avg_Sat_Score] >= 7.5, "Icon_Great",
+			
+			
+			    [Avg_Sat_Score] >= 5, "Icon_Good",
+			
+			
+			    [Avg_Sat_Score] >= 2.5, "Icon_Ok",
+			
+			
+			    "Icon_Bad"
+			)
+		lineageTag: f5113a2d-dbe1-439f-a825-9b70eb19e420
+		dataCategory: ImageUrl
+
 	column _
 		dataType: string
 		lineageTag: 5277924e-7638-4af2-8913-ec01a85ad7ff
