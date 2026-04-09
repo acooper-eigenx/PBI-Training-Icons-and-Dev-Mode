@@ -1,8 +1,13 @@
 table __Measures
 	lineageTag: 525afd49-e773-4a6d-8646-1eb913449e24
 
-	measure Avg_Sat_Score = AVERAGE(Hospital_ER_Data_20240826[patient_sat_score])
+	measure Avg_Sat_Score = AVERAGE(Hospital_ER_Data_20240826[patient_sat_score]) + 1
 		lineageTag: 5ce1909b-fa1e-4ee5-ab5c-b343c04819d5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Avg_Wait_Time = AVERAGE(Hospital_ER_Data_20240826[patient_waittime])
+		lineageTag: 5ce1909b-fa1e-4ee5-ab5c-b343c04819d6
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
