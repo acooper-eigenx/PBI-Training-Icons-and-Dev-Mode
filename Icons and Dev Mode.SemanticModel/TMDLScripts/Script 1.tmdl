@@ -1,0 +1,29 @@
+createOrReplace
+
+	table __Measures
+		lineageTag: 525afd49-e773-4a6d-8646-1eb913449e24
+
+		measure Avg_Sat_Score = AVERAGE(Hospital_ER_Data_20240826[patient_sat_score])
+			lineageTag: 5ce1909b-fa1e-4ee5-ab5c-b343c04819d5
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column _
+			dataType: string
+			lineageTag: 5277924e-7638-4af2-8913-ec01a85ad7ff
+			summarizeBy: none
+			sourceColumn: _
+
+			annotation SummarizationSetBy = Automatic
+
+		partition __Measures = m
+			mode: import
+			source =
+					let
+					    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [_ = _t]),
+					    #"Changed Type" = Table.TransformColumnTypes(Source,{{"_", type text}})
+					in
+					    #"Changed Type"
+
+		annotation PBI_ResultType = Table
+
