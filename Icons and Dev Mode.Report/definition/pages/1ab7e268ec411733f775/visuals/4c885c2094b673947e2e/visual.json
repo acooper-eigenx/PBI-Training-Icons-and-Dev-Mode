@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "021022b07ef460a017d3",
+  "name": "4c885c2094b673947e2e",
   "position": {
-    "x": 0,
+    "x": 639.651352823679,
     "y": 361.26488365456947,
-    "z": 0,
+    "z": 1,
     "height": 359.13979610366027,
     "width": 601.3997769073128,
-    "tabOrder": 0
+    "tabOrder": 1
   },
   "visual": {
     "visualType": "barChart",
@@ -23,11 +23,11 @@
                       "Entity": "Hospital_ER_Data_20240826"
                     }
                   },
-                  "Property": "department_referral"
+                  "Property": "patient_gender"
                 }
               },
-              "queryRef": "Hospital_ER_Data_20240826.department_referral",
-              "nativeQueryRef": "department_referral",
+              "queryRef": "Hospital_ER_Data_20240826.patient_gender",
+              "nativeQueryRef": "patient_gender",
               "active": true
             }
           ]
@@ -85,21 +85,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "11a19b7d0b22d986bcd9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Hospital_ER_Data_20240826"
-              }
-            },
-            "Property": "department_referral"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2a2d6edcd810bfba1b4f",
+        "name": "85938592ea13f9b7a024",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -116,6 +102,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "77563e0d7fdd03c67af1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital_ER_Data_20240826"
+              }
+            },
+            "Property": "patient_gender"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }
